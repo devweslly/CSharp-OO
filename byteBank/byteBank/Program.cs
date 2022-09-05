@@ -1,16 +1,22 @@
-﻿Console.WriteLine("Boas Vindas ao seu banco, ByteBank!");
+﻿using byteBank;
 
-string titular = "Andre Bessa";
-string conta = "10123-x";
-int numero_agencia = 23;
-string nome_agencia = "Agencia Central";
-double saldo = 93.50;
+Console.WriteLine("Boas Vindas ao seu banco, ByteBank!");
 
-Console.WriteLine($"Titular: {titular}");
-Console.WriteLine($"Conta: {conta}");
-Console.WriteLine($"Numero Agencia: {numero_agencia}");
-Console.WriteLine($"Nome Agencia: {nome_agencia}");
-Console.WriteLine($"Saldo: R$ {saldo}");
+// Criando objeto
+ContaCorrente conta1 = new ContaCorrente();
+
+// Acessando propriedades/atributos da class ContaCorrente
+conta1.titular = "André Silva";
+conta1.conta = "10123-x";
+conta1.numero_agencia = 23;
+conta1.nome_agencia = "Angência Central";
+conta1.saldo = 100;
+
+Console.WriteLine($"Titular: {conta1.titular}");
+Console.WriteLine($"Conta: {conta1.conta}");
+Console.WriteLine($"Numero Agencia: {conta1.numero_agencia}");
+Console.WriteLine($"Nome Agencia: {conta1.nome_agencia}");
+Console.WriteLine($"Saldo: R$ {conta1.saldo}");
 
 // O console fica aguardando teclar uma tecla para sair do programa
 Console.ReadKey();
