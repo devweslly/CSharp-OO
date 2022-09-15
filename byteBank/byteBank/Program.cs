@@ -19,20 +19,22 @@ conta2.numero_agencia = 58;
 conta2.nome_agencia = "Agência Central";
 conta2.saldo = 100;
 
-ContaCorrente conta3 = new ContaCorrente();
+Console.WriteLine($"Saldo Amanda pré-saque: {conta2.saldo}");
 
-//Console.WriteLine($"Titular: {conta1.titular}");
-//Console.WriteLine($"Conta: {conta1.conta}");
-//Console.WriteLine($"Numero Agencia: {conta1.numero_agencia}");
-//Console.WriteLine($"Nome Agencia: {conta1.nome_agencia}");
-//Console.WriteLine($"Saldo: R$ {conta1.saldo}");
+// Chamando o método Sacar
+bool saque = conta2.Sacar(50);
+Console.WriteLine($"Saque executado com sucesso {saque}");
+Console.WriteLine($"Saldo Amanda pós-saque: {conta2.saldo}");
 
-Console.WriteLine($"Titular: {conta3.titular}");
-Console.WriteLine($"Conta: {conta3.conta}");
-Console.WriteLine($"Numero Agencia: {conta3.numero_agencia}");
-Console.WriteLine($"Nome Agencia: {conta3.nome_agencia}");
-Console.WriteLine($"Saldo: R$ {conta3.saldo}");
-Console.WriteLine($"Verificador: {conta3.verificador}");
+// Chamando o método Depositar
+conta2.Depositar(60);
+Console.WriteLine($"Saldo Amanda pós-depósito: {conta2.saldo}");
+
+// Chamando o método Transferir
+bool transferencia = conta1.Transferir(50, conta2);
+Console.WriteLine($"Transferência executada com sucesso {transferencia}");
+Console.WriteLine($"Saldo Andre pós-transferência: {conta1.saldo}");
+Console.WriteLine($"Saldo Amanda pós-transferência: {conta2.saldo}");
 
 // O console fica aguardando teclar uma tecla para sair do programa
 Console.ReadKey();
