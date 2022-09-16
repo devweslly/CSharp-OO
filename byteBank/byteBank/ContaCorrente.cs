@@ -1,9 +1,11 @@
-﻿namespace byteBank
+﻿using byteBank.Titular;
+
+namespace byteBank
 {
     public class ContaCorrente
     {
         // Os campos de uma classe possuem valores padrão
-        public string titular;
+        public Cliente titular;
         public string conta;
         public int numero_agencia;
         public string nome_agencia;
@@ -34,6 +36,7 @@
             }
         }
 
+        // O método Transferir possui mais de um parametro
         public bool Transferir(double valor, ContaCorrente destino)
         {
             if(saldo < valor || valor < 0)
