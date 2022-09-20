@@ -46,16 +46,31 @@ Console.WriteLine($"Saldo Amanda pós-transferência: {conta2.saldo}");
 //cliente.cpf = "111.111.111-11";
 //cliente.profissao = "Desenvolvedor de Software";
 
-ContaCorrente conta3 = new ContaCorrente();
-conta3.titular = new Cliente();
-conta3.titular.nome = "Andre Silva";
-conta3.titular.cpf = "111.111.111-11";
-conta3.titular.profissao = "Desenvolvedor de Software";
-conta3.conta = "2513252-X";
-conta3.numero_agencia = 35;
-conta3.nome_agencia = "Agência Central";
+//ContaCorrente conta3 = new ContaCorrente();
+//conta3.titular = new Cliente();
+//conta3.titular.nome = "Andre Silva";
+//conta3.titular.cpf = "111.111.111-11";
+//conta3.titular.profissao = "Desenvolvedor de Software";
+//conta3.conta = "2513252-X";
+//conta3.numero_agencia = 35;
+//conta3.nome_agencia = "Agência Central";
 
-Console.WriteLine(conta3.titular.nome);
+//Console.WriteLine(conta3.titular.nome);
+//Cliente sarah = new Cliente();
+//sarah.Nome = "Sarah Silva";
+
+//ContaCorrente conta4 = new ContaCorrente(235, "125358-X");
+//conta4.Saldo = 150;
+//conta4.Titular = sarah;
+//Console.WriteLine($"Saldo: {conta4.Titular.Nome}");
+//Console.WriteLine($"Saldo: {conta4.Saldo}");
+//Console.WriteLine($"Saldo: {conta4.Numero_agencia}");
+//Console.WriteLine($"Saldo: {conta4.Conta}");
+
+ContaCorrente conta5 = new ContaCorrente(235, "125358-X");
+ContaCorrente conta6 = new ContaCorrente(365, "957256-X");
+
+Console.WriteLine(ContaCorrente.TotalDeContasCriadas);
 
 // O console fica aguardando teclar uma tecla para sair do programa
 Console.ReadKey();
